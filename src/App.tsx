@@ -9,27 +9,6 @@ const skills = [
   "MySQL",
 ];
 
-const projects = [
-  {
-    title: "Navy Commerce",
-    description:
-      "Platform e-commerce gelap dengan animasi mikro, dashboard admin, dan integrasi pembayaran.",
-    tech: ["React", "PHP", "MySQL"],
-  },
-  {
-    title: "BluePay Finance",
-    description:
-      "Aplikasi finansial dengan visualisasi data real-time, notifikasi cerdas, dan UI elegan.",
-    tech: ["React Native", "Node", "MySQL"],
-  },
-  {
-    title: "CodeIgniter CRM",
-    description:
-      "Sistem CRM modular untuk tim sales, lengkap dengan pipeline, laporan, dan otomasi follow-up.",
-    tech: ["CodeIgniter", "PHP", "MySQL"],
-  },
-];
-
 const App = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-abyss text-white">
@@ -52,9 +31,6 @@ const App = () => {
           </a>
           <a className="transition hover:text-skyglow" href="#skills">
             Keahlian
-          </a>
-          <a className="transition hover:text-skyglow" href="#projects">
-            Proyek
           </a>
           <a className="transition hover:text-skyglow" href="#contact">
             Kontak
@@ -149,45 +125,6 @@ const App = () => {
                   Animasi halus, interaksi kreatif, dan pengalaman pengguna yang memikat.
                 </p>
               </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="projects" className="space-y-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-skyglow/70">
-                Showcase
-              </p>
-              <h3 className="text-3xl font-semibold">Proyek Pilihan</h3>
-            </div>
-            <p className="max-w-xl text-sm text-slate-200/70">
-              Kumpulan karya yang menonjolkan animasi kreatif, desain elegan, dan performa solid
-              untuk berbagai kebutuhan bisnis.
-            </p>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {projects.map((project) => (
-              <article
-                key={project.title}
-                className="glass-panel group relative overflow-hidden rounded-3xl p-6 transition hover:-translate-y-2 hover:shadow-neon"
-              >
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-skyglow/20 blur-3xl transition group-hover:bg-skyglow/40" />
-                <div className="relative z-10 space-y-4">
-                  <h4 className="text-xl font-semibold text-white">{project.title}</h4>
-                  <p className="text-sm text-slate-200/75">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full border border-skyglow/30 bg-skyglow/10 px-3 py-1 text-xs text-slate-100"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </article>
             ))}
           </div>
         </section>
