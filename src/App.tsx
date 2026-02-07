@@ -30,6 +30,39 @@ const projects = [
   },
 ];
 
+const links = [
+  {
+    title: "Portfolio Utama",
+    description: "Koleksi project web & mobile terbaru.",
+    url: "https://example.com/portfolio",
+  },
+  {
+    title: "GitHub",
+    description: "Source code, eksperimen, dan kontribusi open-source.",
+    url: "https://github.com/username",
+  },
+  {
+    title: "LinkedIn",
+    description: "Profil profesional & pengalaman kerja.",
+    url: "https://linkedin.com/in/username",
+  },
+  {
+    title: "Behance",
+    description: "UI/UX case study dan eksplorasi desain.",
+    url: "https://behance.net/username",
+  },
+  {
+    title: "Resume",
+    description: "Unduh CV terbaru dalam format PDF.",
+    url: "https://example.com/resume.pdf",
+  },
+  {
+    title: "Kontak WhatsApp",
+    description: "Diskusi cepat untuk kolaborasi atau konsultasi.",
+    url: "https://wa.me/6281234567890",
+  },
+];
+
 const App = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-abyss text-white">
@@ -190,6 +223,29 @@ const App = () => {
               </article>
             ))}
           </div>
+        </section>
+
+                <section className="grid gap-4">
+          {links.map((link) => (
+            <a
+              key={link.title}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="glass-panel group flex flex-col gap-3 rounded-2xl px-6 py-5 transition hover:-translate-y-1 hover:border-skyglow/60 hover:shadow-neon md:flex-row md:items-center md:justify-between"
+            >
+              <div>
+                <h2 className="text-lg font-semibold text-white">{link.title}</h2>
+                <p className="text-sm text-slate-200/70">{link.description}</p>
+              </div>
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-skyglow transition group-hover:text-white">
+                Buka Link
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-skyglow/30 bg-skyglow/10">
+                  ↗
+                </span>
+              </span>
+            </a>
+          ))}
         </section>
 
         <section
